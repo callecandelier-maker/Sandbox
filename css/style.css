@@ -11,11 +11,28 @@ body {
   padding-left: 100px;
   padding-right: 100px;
 }
+
+.img:hover{
+  width: 40%;
+  transition: 2s;
+}
+
+.wrapper{
+  height: 1000px;
+  width: 1000px;
+  /*man använder .. för att komma ut ur den befintliga mappen och ut i rot mappen */
+  background-image: url("../img/istockphoto-1324015132-2048x2048.jpg");
+}
+
+.wrapper p{
+  /*text-align: center;*/
+  color: white;
+}
+/*
 .text-wrapper img{
   max-width: 100%;
 }
+*/
 
-img:hover{
-  width: 40%;
-}
+
 
