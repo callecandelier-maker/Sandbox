@@ -1,6 +1,6 @@
 
-body{
-  background-color:white;
+body {
+  background-color: rgba(255, 255, 255, 0.85); /* 0.85 = 85% opacitet */
 }
 .header-Wrapper{
   text-align: center;
@@ -33,6 +33,8 @@ body{
   display: flex;
   justify-content: center;
   gap: 20px;    /* mellanrum mellan bilderna */
+  padding-left: 50px;
+  padding-right: 50px;
   margin-top: 40px;
   flex-wrap: wrap;
 }
@@ -53,6 +55,19 @@ body{
   position: relative; /* gör det möjligt att absolut-positionera knappen */
   transition: width 0.8s ease, height 0.8s ease; /* <-- lägg till detta */
 }
+
+/*.red { background-color:#FF8C7B ; } /*#B5002D*/
+/*.orange { background-color: #F5C7B8; } /*#FF6F61*/
+/*.purple { background-color: #3F2B96; }
+.varm-taupe { background-color: #A98C7E; }
+.golden-rod { background-color: #D9A441; }*/
+
+.deep-red{background-color:#A9423E} /*#9B2D30*/
+.soft-peach{background-color: #CC9F92}
+.warm-orange{background-color: #FF8C7B}
+.deep-purple{background-color:#5A48A8 }  /*#3F2B96*/
+.gold{background-color:#D9C0B0}  /*#A98C7E*/
+
 .image-wrapper:hover{
   width: 16%;
   height: 155px;
@@ -64,8 +79,8 @@ body{
   right: 10px;        /* avstånd från högerkanten */
   padding: 6px 12px;
   border: none;
-  border-radius: 4px;
-  background-color: black;
+  border-radius: 8px;
+  background-color: transparent;
   color: white;
   cursor: pointer;
   font-size: 14px;
@@ -74,7 +89,7 @@ body{
 }
 
 .image-btn:hover {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.4); /* vit med 70% opacitet */
   color: black;
 }
 
@@ -105,16 +120,19 @@ body{
   justify-content: center;    /* centrerar horisontellt */
   /*align-items: center;        /* centrerar vertikalt */
   /*margin: 0 auto;             /* centrerar hela div:en på sidan */
+
+  gap: 12px; /* LUFT mellan input & knapp */
+
 }
 .searchbar{
   width: 550px;               /* Googles storlek ungefär */
   height: 44px;
-  border-radius: 24px;        /* rundare = Google-stil */
+  border-radius: 12px;        /* rundare = Google-stil */
   border: 1px solid #dcdcdc;  /* ljusgrå tunn border */
   padding: 0 16px;
   font-size: 16px;
   box-shadow: none;           /* ingen skugga i normal state */
-  transition: all 0.2s ease;  /* mjuk animation vid hover */
+  transition: all 0.5s ease;  /* mjuk animation vid hover */
 }
 
 
@@ -127,6 +145,21 @@ body{
   outline: none;
   border: 1px solid #4285f4;  /* blå markering som Google */
   box-shadow: 0 1px 6px rgba(66,133,244);
+
+}
+
+.search-button{
+  background-color: white;
+  font-size: 16px;
+  height: 44px;
+  width: 100px;
+  border-radius: 12px;
+  border: 1px solid #dcdcdc;  /* ljusgrå tunn border */
+  box-shadow: none;           /* ingen skugga i normal state */
+}
+.search:hover{
+  border: 1px solid #b8b8b8;  /* aningen mörkare vid hover */
+  box-shadow: 0 1px 6px rgba(32,33,36,0.28);
 }
 
 
