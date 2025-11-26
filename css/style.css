@@ -1,12 +1,12 @@
 
 body {
-  background-color: rgba(255, 255, 255, 0.85); /* 0.85 = 85% opacitet */
+  background-color: rgba(211, 211, 211, 0.9); /* 0.85 = 85% opacitet */
 }
-.header-Wrapper{
+/*.header-Wrapper{
   text-align: center;
   font-size: 10px;
 
-}
+}*/
 /* här refererar vi till classen som vi skapat i html */
 .text-wrapper {
   text-align: center;
@@ -22,12 +22,6 @@ body {
   margin-bottom: 20px;
   color: black;
 }
-/*
-.img:hover{
-  width: 40%;
-  transition: 2s;
-}
-*/
 
 .image-container {
   display: flex;
@@ -56,17 +50,11 @@ body {
   transition: width 0.8s ease, height 0.8s ease; /* <-- lägg till detta */
 }
 
-/*.red { background-color:#FF8C7B ; } /*#B5002D*/
-/*.orange { background-color: #F5C7B8; } /*#FF6F61*/
-/*.purple { background-color: #3F2B96; }
-.varm-taupe { background-color: #A98C7E; }
-.golden-rod { background-color: #D9A441; }*/
-
-.deep-red{background-color:#A9423E} /*#9B2D30*/
-.soft-peach{background-color: #CC9F92}
-.warm-orange{background-color: #FF8C7B}
-.deep-purple{background-color:#5A48A8 }  /*#3F2B96*/
-.gold{background-color:#D9C0B0}  /*#A98C7E*/
+.deep-red{background-color:#9B2D30} /**/
+.soft-peach{background-color: #B78B7F}
+.warm-orange{background-color: #E67869}
+.deep-purple{background-color: #3F2B96} #4E3A9F
+.gold{background-color: #A98C7E}
 
 .image-wrapper:hover{
   width: 16%;
@@ -74,6 +62,7 @@ body {
 }
 
 .image-btn {
+  font-family: "roboto-light";
   position: absolute;
   bottom: 10px;       /* avstånd från botten */
   right: 10px;        /* avstånd från högerkanten */
@@ -83,19 +72,28 @@ body {
   background-color: transparent;
   color: white;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 16px;
   transition: background 0.3s;
-  color: white;
 }
 
 .image-btn:hover {
   background-color: rgba(255, 255, 255, 0.4); /* vit med 70% opacitet */
   color: black;
 }
+.image-btn:active {
+  background-color: rgba(255, 255, 255, 0.7); /* mer synlig */
+  color: white; /* färg ändras när man klickar */
+  opacity: 0.8; /* kan också använda opacity */
+}
 
 .image-wrapper p{
   text-align: center;
   color: white;
+  font-size: 20px;
+  font-family: "ariel";
+}
+.paragraph-txt{
+  text-align: center;
   font-size: 20px;
 }
 
@@ -114,7 +112,7 @@ body {
   border-radius: 60px;
   padding: 8px;
   font-size: 16px;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 
   display: flex;              /* aktiverar flexbox */
   justify-content: center;    /* centrerar horisontellt */
@@ -151,6 +149,7 @@ body {
 .search-button{
   background-color: white;
   font-size: 16px;
+  font-family: "ariel";
   height: 44px;
   width: 100px;
   border-radius: 12px;
