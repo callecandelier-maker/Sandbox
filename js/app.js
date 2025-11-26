@@ -14,7 +14,6 @@
      for (let col = 1; col <= 10; col++) {
        line += col + " ";
      }
-
      console.log(line);
    }
 

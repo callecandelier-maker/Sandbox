@@ -1,18 +1,26 @@
-body {
-  background-color: white;  /* ändrar bakgrund */
+
+body{
+  background-color:white;
 }
 .header-Wrapper{
   text-align: center;
-  font-size: 100px;
-  margin-bottom: 1px;
+  font-size: 10px;
+
 }
 /* här refererar vi till classen som vi skapat i html */
 .text-wrapper {
-  /*margin: 0 auto;*/
-  margin-top: 5px;
   text-align: center;
   padding-left: 100px;
   padding-right: 100px;
+}
+.h1-txt{
+  letter-spacing: calc(1px);
+  text-align: center;
+  font-weight: bold;
+  font-size: 130px;
+  margin-top: 130px;
+  margin-bottom: 20px;
+  color: black;
 }
 /*
 .img:hover{
@@ -21,26 +29,60 @@ body {
 }
 */
 
-
+.image-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;    /* mellanrum mellan bilderna */
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
 /* detta är classer för bilden*/
 .image-wrapper{
-
   /*man använder .. för att komma ut ur den befintliga mappen och ut i rot mappen */
-  background-image: url("../img/istockphoto-1324015132-2048x2048.jpg");
-  width: 100%;
-  height: 1000px;            /* eller valfri höjd */
+  /*background-image: url("../img/istockphoto-1324015132-2048x2048.jpg");*/
+  width: 15%;
+  height: 150px;            /* eller valfri höjd */
   background-size: cover;   /* FYLLER div:en utan att sträckas */
   background-position: center; /* centrera motivet */
   background-repeat: no-repeat;
+  background-color: #555555;
   border-radius: 8px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  position: relative; /* gör det möjligt att absolut-positionera knappen */
+  transition: width 0.8s ease, height 0.8s ease; /* <-- lägg till detta */
+}
+.image-wrapper:hover{
+  width: 16%;
+  height: 155px;
+}
+
+.image-btn {
+  position: absolute;
+  bottom: 10px;       /* avstånd från botten */
+  right: 10px;        /* avstånd från högerkanten */
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+  color: white;
+}
+
+.image-btn:hover {
+  background-color: white;
+  color: black;
 }
 
 .image-wrapper p{
   text-align: center;
   color: white;
-  font-size: 50px;
+  font-size: 20px;
 }
-
 
 .text-wrapper img{
   display: block;         /* tar bort inline-gap */
@@ -48,6 +90,43 @@ body {
   height: auto;           /* behåller proportionerna */
   margin-top: 20px;       /* valfritt, lite avstånd från text */
   border-radius: 8px;     /* valfritt, rundade hörn */
+
+}
+
+.wrapper-searchbar{
+  width: 100%;
+  height: 40px;
+  border-radius: 60px;
+  padding: 8px;
+  font-size: 16px;
+  margin-bottom: 100px;
+
+  display: flex;              /* aktiverar flexbox */
+  justify-content: center;    /* centrerar horisontellt */
+  /*align-items: center;        /* centrerar vertikalt */
+  /*margin: 0 auto;             /* centrerar hela div:en på sidan */
+}
+.searchbar{
+  width: 550px;               /* Googles storlek ungefär */
+  height: 44px;
+  border-radius: 24px;        /* rundare = Google-stil */
+  border: 1px solid #dcdcdc;  /* ljusgrå tunn border */
+  padding: 0 16px;
+  font-size: 16px;
+  box-shadow: none;           /* ingen skugga i normal state */
+  transition: all 0.2s ease;  /* mjuk animation vid hover */
+}
+
+
+/* Hover-effekt — ljus border + glow */
+.searchbar:hover{
+  border: 1px solid #b8b8b8;  /* aningen mörkare vid hover */
+  box-shadow: 0 1px 6px rgba(32,33,36,0.28);
+}
+.searchbar:focus {          /* även när man klickar i den */
+  outline: none;
+  border: 1px solid #4285f4;  /* blå markering som Google */
+  box-shadow: 0 1px 6px rgba(66,133,244);
 }
 
 
