@@ -33,7 +33,7 @@ body {
   flex-wrap: wrap;
 }
 /* detta är classer för bilden*/
-.image-wrapper{
+.image-wrapper {
   /*man använder .. för att komma ut ur den befintliga mappen och ut i rot mappen */
   /*background-image: url("../img/istockphoto-1324015132-2048x2048.jpg");*/
   width: 15%;
@@ -48,41 +48,26 @@ body {
 
   position: relative; /* gör det möjligt att absolut-positionera knappen */
   transition: width 0.8s ease, height 0.8s ease; /* <-- lägg till detta */
+  overflow: hidden; /* viktigt för att text inte ska sticka ut */
 }
 
-.deep-red{background-color:#9B2D30} /**/
+/*.deep-red{background-color:#9B2D30}
 .soft-peach{background-color: #B78B7F}
 .warm-orange{background-color: #E67869}
 .deep-purple{background-color: #3F2B96} #4E3A9F
-.gold{background-color: #A98C7E}
+.gold{background-color: #A98C7E}*/
 
 .image-wrapper:hover{
   width: 16%;
   height: 155px;
+  background-color: white;
 }
 
-.image-btn {
-  position: absolute;
-  bottom: 10px;       /* avstånd från botten */
-  right: 10px;        /* avstånd från högerkanten */
-  padding: 6px 12px;
-  border: none;
-  border-radius: 8px;
-  background-color: transparent;
-  color: white;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background 0.3s;
-}
 
 .image-btn:hover {
   background-color: rgba(255, 255, 255, 0.4); /* vit med 70% opacitet */
   color: black;
-}
-.image-btn:active {
-  background-color: rgba(255, 255, 255, 0.7); /* mer synlig */
-  color: white; /* färg ändras när man klickar */
-  opacity: 0.8; /* kan också använda opacity */
+
 }
 
 .image-wrapper p{
@@ -91,6 +76,20 @@ body {
   font-size: 20px;
   font-family: 'Roboto', sans-serif;
 }
+.image-wrapper p:first-child {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+.hover-Text{
+  opacity: 0;
+  color: black; /* färg vid hover */
+  font-size: 18px;
+}
+.image-wrapper:hover .hover-Text {
+  opacity: 1;
+  color: black;
+}
+
 .paragraph-txt{
   font-family: Roboto, sans-serif;
   text-align: center;
