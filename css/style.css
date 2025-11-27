@@ -35,59 +35,83 @@ body {
 /* detta är classer för bilden*/
 .image-wrapper {
   /*man använder .. för att komma ut ur den befintliga mappen och ut i rot mappen */
-  /*background-image: url("../img/istockphoto-1324015132-2048x2048.jpg");*/
+ /* background-image: url("../img/wassily-kandinsky-6254506_1280.webp");*/
   width: 15%;
   height: 150px;            /* eller valfri höjd */
   background-size: cover;   /* FYLLER div:en utan att sträckas */
   background-position: center; /* centrera motivet */
   background-repeat: no-repeat;
   background-color: #555555;
-  border-radius: 8px;
+  /*border-radius: 8px;*/
   padding-left: 20px;
   padding-right: 20px;
 
   position: relative; /* gör det möjligt att absolut-positionera knappen */
-  transition: width 0.8s ease, height 0.8s ease; /* <-- lägg till detta */
+  /*transition: width 0.8s ease, height 0.8s ease; /* <-- lägg till detta */
+  transition: background-color 0.6s;
+  /*transition: opacity 0.6s ease;*/
   overflow: hidden; /* viktigt för att text inte ska sticka ut */
 }
 
-/*.deep-red{background-color:#9B2D30}
-.soft-peach{background-color: #B78B7F}
-.warm-orange{background-color: #E67869}
+/*.deep-red{background-color:#9B2D30}*/
+.soft-peach{
+  Background-image: url("../img/wassily-kandinsky-6254506_1280.webp");
+}   /*background-image: background-color: #B78B7F
+/*.warm-orange{background-color: #E67869}
 .deep-purple{background-color: #3F2B96} #4E3A9F
 .gold{background-color: #A98C7E}*/
-
-.image-wrapper:hover{
-  width: 16%;
-  height: 155px;
+.category.active .hover-Text {
+  opacity: 1;  /* texten syns */
   background-color: white;
 }
 
-
-.image-btn:hover {
-  background-color: rgba(255, 255, 255, 0.4); /* vit med 70% opacitet */
-  color: black;
-
+.hover-Text{
+  opacity: 1;
+  color: black; /* färg vid hover */
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
 }
+
+.image-wrapper.active {
+  background-color: white;
+}
+/*
+.image-wrapper.active .hover-Text {
+  opacity: 1;
+}*/
+
+.image-wrapper:hover{
+  /*width: 16%;*/
+  /*height: 155px;*/
+  background-color: white;
+ /* opacity: 0;  /* lägre värde = mer fade */
+  cursor: pointer;
+}
+
 
 .image-wrapper p{
   text-align: center;
   color: white;
   font-size: 20px;
   font-family: 'Roboto', sans-serif;
+
 }
-.image-wrapper p:first-child {
-  opacity: 1;
-  transition: opacity 0.3s ease;
-}
-.hover-Text{
-  opacity: 0;
-  color: black; /* färg vid hover */
-  font-size: 18px;
-}
+
+
 .image-wrapper:hover .hover-Text {
+
   opacity: 1;
   color: black;
+
+}
+.hover-Text.active{
+  color: black;
+}
+
+/* Active: bakgrund vit och text synlig permanent */
+.image-wrapper.active  {
+  background-color: white;
+
 }
 
 .paragraph-txt{
